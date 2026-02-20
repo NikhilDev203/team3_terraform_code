@@ -18,11 +18,11 @@ resource "azurerm_key_vault" "main" {
   purge_protection_enabled   = true
   soft_delete_retention_days = 7
 
-  network_rules {
+  /*network_rules {
     default_action             = "Deny"
     bypass                     = ["AzureServices"]
     virtual_network_subnet_ids = []
-  }
+  } */
 
   tags = var.common_tags
 }
