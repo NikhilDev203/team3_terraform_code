@@ -42,7 +42,7 @@ output "appointment_function_app_principal_id" {
   value       = azurerm_windows_function_app.appointment_service.identity[0].principal_id
   description = "Appointment Service Function App Managed Identity Principal ID"
 }
-
+/*
 output "devops_vm_id" {
   value       = azurerm_windows_virtual_machine.devops_vm.id
   description = "DevOps VM ID"
@@ -67,3 +67,4 @@ output "devops_vm_principal_id" {
   value       = azurerm_windows_virtual_machine.devops_vm.identity[0].principal_id
   description = "DevOps VM Managed Identity Principal ID"
 }
+*/

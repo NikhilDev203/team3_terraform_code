@@ -47,7 +47,7 @@ resource "azurerm_windows_function_app" "patient_service" {
     }
 
     application_stack {
-      dotnet_version              = "6.0"
+      dotnet_version              = "v6.0"
       use_dotnet_isolated_runtime = true
     }
   }
@@ -92,7 +92,7 @@ resource "azurerm_windows_function_app" "appointment_service" {
     }
 
     application_stack {
-      dotnet_version              = "6.0"
+      dotnet_version              = "v6.0"
       use_dotnet_isolated_runtime = true
     }
   }
@@ -107,7 +107,7 @@ resource "azurerm_windows_function_app" "appointment_service" {
 
   depends_on = [azurerm_service_plan.main]
 }
-
+/*
 # Network Interface for VM
 resource "azurerm_network_interface" "devops_vm_nic" {
   name                = "nic-devops-vm"
@@ -185,6 +185,7 @@ resource "azurerm_virtual_machine_extension" "devops_vm_script" {
     "commandToExecute" = "powershell -Command \"$ProgressPreference='SilentlyContinue'; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1')); choco install -y terraform docker-desktop git vscode azure-cli\""
   })
 }
+*/
 
 # Storage Account for state files and logs
 locals {

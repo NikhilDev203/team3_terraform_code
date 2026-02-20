@@ -86,7 +86,7 @@ output "appointment_function_app_default_hostname" {
   value       = module.compute.appointment_function_app_default_hostname
   description = "Appointment Service Function App Hostname"
 }
-
+/*
 output "devops_vm_id" {
   value       = module.compute.devops_vm_id
   description = "DevOps VM ID"
@@ -96,7 +96,7 @@ output "devops_vm_public_ip" {
   value       = module.compute.devops_vm_public_ip
   description = "DevOps VM Public IP"
 }
-
+*/
 # Monitoring Outputs
 output "log_analytics_workspace_id" {
   value       = module.monitoring.workspace_id
